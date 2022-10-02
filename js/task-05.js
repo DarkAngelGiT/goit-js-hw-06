@@ -1,19 +1,17 @@
 const textInput = document.querySelector("#name-input");
-const output = document.querySelector("#name-output");
+const textOutput = document.querySelector("#name-output");
 
-// const spanText = output.textContent;
+// створюємо змінну куди записуємо дефолтний текст спану
+const spanText = textOutput.textContent;
+// console.log(spanText);
 
-textInput.addEventListener("input", (event) => {
-  // output.textContent = event.currentTarget.value;
-const spanText = output.textContent;
-console.log(spanText);
-  if (output.textContent === " ") {
-    output.textContent = spanText;
-  }
-  output.textContent = event.currentTarget.value;
-
+// додаємо слухача події на елемент інпут
+textInput.addEventListener("input", (event) => {  
+  if (event.currentTarget.value !== '') {
+    // якщо інпут не пустий, записуємо в спан поточне значення з інпуту
+    return textOutput.textContent = event.currentTarget.value;
+  } 
+  // інакше повертаємо дефолтне значення
+  return textOutput.textContent = spanText;
 });
 
-// if (output.textContent === "") {
-//   output.textContent = spanText;
-// }
