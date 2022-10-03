@@ -8,4 +8,3 @@ const createBoxBtn = document.querySelector("[data-create]"); // звернен�
 const deleteBoxBtn = document.querySelector("[data-destroy]"); // звернення до кнопки видалення елементів
 const boxes = document.querySelector("#boxes"); // звернення до діву куди будемо записувати створені елементи
 let baseBoxSize = 30; // змінна початкового розміру елементів
-
