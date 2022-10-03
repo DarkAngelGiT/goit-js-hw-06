@@ -2,35 +2,53 @@
 /*                                  Варіант 1                                 */
 /* -------------------------------------------------------------------------- */
 const inputRef = document.querySelector("#validation-input");
+// ===============
+
 inputRef.addEventListener("blur", (event) => {
-  if (event.currentTarget.value.lenght == inputRef.dataset.lenght) {
+  if (event.currentTarget.value.length == inputRef.dataset.length) {
     inputRef.classList.add("valid");
     inputRef.classList.remove("invalid");
     
   } else {
-    inputRef.classList.add("invalid");    
+    inputRef.classList.add("invalid");
     inputRef.classList.remove("valid");
     
   }
 });
 
 /* -------------------------------------------------------------------------- */
+/*                                  Варіант 2                                 */
+/* -------------------------------------------------------------------------- */
+
+// const classChange = (event) => {
+//   if (event.currentTarget.value.length == inputRef.dataset.length) {
+//     inputRef.classList.add("valid");
+//     inputRef.classList.remove("invalid");
+    
+//   } else {
+//     inputRef.classList.add("invalid");
+//     inputRef.classList.remove("valid");
+    
+//   }
+// };
+
+// inputRef.addEventListener("blur", classChange);
+
+/* -------------------------------------------------------------------------- */
 /*                              Цікавіший варіант                             */
 /* -------------------------------------------------------------------------- */
-const input = document.querySelector("#validation-input");
 
-const addRemoveClass = (remove, add) => {
-  input.classList.remove(`${remove}`);
-  input.classList.add(`${add}`);
-};
+// const addRemoveClass = (remove, add) => {
+//   inputRef.classList.remove(`${remove}`);
+//   inputRef.classList.add(`${add}`);
+// };
 
-const validInput = (event) => {
-  if (Number(input.dataset.length) === event.currentTarget.value.length) {
-    return addRemoveClass("invalid", "valid");
-  } 
-    return addRemoveClass("valid", "invalid");
+// const validInput = (event) => {
+//   if (Number(inputRef.dataset.length) === event.currentTarget.value.length) {
+//     return addRemoveClass("invalid", "valid");
+//   }
+//     return addRemoveClass("valid", "invalid");
   
-};
+// };
 
-input.addEventListener("blur", validInput);
-
+// inputRef.addEventListener("blur", validInput);

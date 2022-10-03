@@ -14,14 +14,14 @@ const images = [
 ];
 
 const galleryListRef = document.querySelector("ul.gallery");
-// створюємо ф-цію для творення елементів, деструктуризація масиву об'єкту images
+
+// створюємо ф-цію для творення елементів, деструктуризація масиву images
 const newGallery = images.map(({url, alt}) => {
   return `<li class="gallery__item"><img class="gallery__img" src="${url} alt="${alt}">`;
 })
   .join(" ");
 
   // Запис нових елементів в список galleryListRef в середині елемента списку в кінці дочірніх елементів
-galleryListRef.insertAdjacentHTML("beforeend",newGallery);
-
+galleryListRef.insertAdjacentHTML("beforeend", newGallery);
 
 console.log(newGallery);
