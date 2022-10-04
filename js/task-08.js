@@ -3,7 +3,7 @@ const formRef = document.querySelector(".login-form");
 
 const formSubmit = (event) => {
   event.preventDefault();
-  const { 
+  const {
     elements: { email, password } // об"єкт з короткими властивостями
   } = event.currentTarget;
   
@@ -11,7 +11,7 @@ const formSubmit = (event) => {
     return alert("Please fill in all the fields!");
   }
 
-  console.log(`Login: ${email.value}, Password: ${password.value}`);
+  console.log({"Email: ": email.value, "Password: ": password.value});
   event.currentTarget.reset();
 }
 
